@@ -4,8 +4,8 @@ int mode(int array[], int len);
 
 int main(void)
 {
-    int numbers[] = {1, 2, 3};
-    printf("mode: %i", mode(numbers, 3));
+    int numbers[] = {1, 2, 3, 3};
+    printf("mode: %i", mode(numbers, 4));
 }
 /*
  *return: -1 when there is no mode, and mode when there is one
@@ -27,7 +27,6 @@ int mode(int array[], int len)
                 count++;
             }
         }
-        printf(" count: %i", count);
         if (count > temp)
         {
             mode = array[i];
@@ -37,7 +36,6 @@ int mode(int array[], int len)
         {
             count_mult_modes++;
         }
-        printf(" temp: %i ", temp);
     }
     if (count_mult_modes > 1 || temp == 0)
     {
