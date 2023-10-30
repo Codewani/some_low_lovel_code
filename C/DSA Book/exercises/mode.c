@@ -1,11 +1,20 @@
 #include <stdio.h>
+#define SIZE 3
 
 int mode(int array[], int len);
 
 int main(void)
 {
-    int numbers[] = {1, 2, 3, 4, 4};
-    printf("mode: %i", mode(numbers, 5));
+    int numbers[] = {4, 5, 6};
+    if (mode(numbers, SIZE) == -1)
+    {
+        printf("There is no mode");
+    }
+    else
+    {
+        printf("mode: %i", mode(numbers, SIZE));
+    }
+
 }
 /*
  *return: -1 when there is no mode, and mode when there is one
